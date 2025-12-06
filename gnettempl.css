@@ -1,0 +1,416 @@
+.voucher-container {
+            width: 21cm;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            gap: 0.15cm;
+            padding: 0.4cm;
+            box-sizing: border-box;
+        }
+        
+        .voucher {
+            border: 2px solid;
+            padding: 0.15cm;
+            box-sizing: border-box;
+            background: linear-gradient(120deg, #00f5a0 0%, #00d2ff 40%, #6a00f4 100%);
+			color: #1b1b1b;
+			text-shadow: 0 1px 0 rgba(255,255,255,0.12);
+            position: relative;
+            break-inside: avoid;
+            height: 2.6cm;
+			width: 9.6cm;
+			margin-bottom: 5px;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+        }
+        
+        /* Warna berbeda untuk setiap paket */
+        .paket-1h { 
+            border-color: #2c5282;
+            background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+            border-left: 4px solid #2c5282;
+        }
+        .paket-3h { 
+            border-color: #276749;
+            background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+            border-left: 4px solid #276749;
+        }
+        .paket-1d { 
+            border-color: #9b59b6;
+            background: linear-gradient(135deg, #faf5ff 0%, #e9d8fd 100%);
+            border-left: 4px solid #9b59b6;
+        }
+        .paket-7d { 
+            border-color: #d69e2e;
+            background: linear-gradient(135deg, #fffaf0 0%, #feebc8 100%);
+            border-left: 4px solid #d69e2e;
+        }
+		
+		.paket-30d { 
+            border-color: #d69e2e;
+            background: linear-gradient(120deg, #00f5a0 0%, #00d2ff 40%, #6a00f4 100%);
+            border-left: 4px solid #d69e2e;
+        }
+        
+        /* Konten utama di kiri */
+        .voucher-content {
+            flex: 1;
+            padding-right: 0.08cm;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 1px dashed #cbd5e0;
+            padding-bottom: 0.06cm;
+            margin-bottom: 0.06cm;
+            position: relative;
+        }
+        
+        .company-name {
+            font-size: 10px;
+            font-weight: 800;
+            margin: 0;
+            color: #2d3748;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+		.logo-banner {
+          width: 100%;
+          max-height: 20px;    /* atur tinggi agar tetap memanjang */
+          object-fit: contain; /* menjaga rasio */
+          opacity: 0.9;        /* sedikit transparan agar menyatu */
+        }
+		
+        .cs-info {
+            font-size: 6px;
+            margin: 0;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+        }
+        
+        .whatsapp-icon {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #25D366;
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        .whatsapp-icon:after {
+            content: "";
+            position: absolute;
+            width: 3px;
+            height: 1.5px;
+            background: white;
+            border-radius: 0.75px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        
+        .info-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .voucher-main-info {
+            display: flex;
+            margin: 0.06cm 0;
+        }
+        
+        .voucher-left {
+            width: 40%;
+            padding-right: 0.06cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .voucher-code {
+            font-size: 12px;
+            font-weight: 800;
+            text-align: center;
+            background: linear-gradient(90deg, #2d3748, #4a5568);
+            color: white;
+            padding: 0.04cm 0.08cm;
+            border-radius: 3px;
+            width: 100%;
+            letter-spacing: 0.5px;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 0.04cm;
+        }
+        
+        .price-tag {
+            font-size: 10px;
+            font-weight: 800;
+            color: #c53030;
+            background: rgba(220, 38, 38, 0.1);
+            padding: 0.03cm 0.06cm;
+            border-radius: 3px;
+            text-align: center;
+            border: 1px solid rgba(220, 38, 38, 0.3);
+        }
+        
+        .voucher-right {
+            width: 60%;
+            padding-left: 0.06cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .network-name {
+            # font-size: 10px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 0.03cm;
+            color: #2d3748;
+            text-transform: uppercase;
+        }
+        
+        .duration-info {
+            font-size: 7px;
+            text-align: center;
+            color: #2c5282;
+            font-weight: 700;
+            background: rgba(44, 82, 130, 0.1);
+            padding: 0.03cm;
+            border-radius: 2px;
+        }
+        
+        .warning {
+            font-size: 7px;
+            text-align: justify;
+            line-height: 1.3;
+            padding: 0.03cm;
+            background: rgba(220, 38, 38, 0.08);
+            border-radius: 2px;
+            color: #c53030;
+            border-left: 2px solid #fc8181;
+            margin-top: auto;
+        }
+        
+        /* QR Code Area di Samping Kanan - BESAR */
+        .qr-sidebar {
+            # width: 2.4cm;
+            # height: 2.4cm;
+            # background: white;
+            border-left: 1px dashed #cbd5e0;
+            padding-left: 0.08cm;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .qr-container {
+            width: 2.5cm;
+            height: 2.5cm;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 0.05cm;
+        }
+        
+        .qr-code {
+            width: 100%;
+			height: 100%;
+			background: white;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+        }
+	
+		.qrcode{
+			height:80px;
+			width:80px;
+			position: relative;
+		}
+        
+        .qr-text {
+            font-size: 4px;
+            color: #718096;
+            margin-top: 0.02cm;
+            font-weight: 600;
+            text-align: center;
+            position: absolute;
+            bottom: -0.12cm;
+            width: 100%;
+        }
+        
+        .voucher-number {
+            position: absolute;
+            top: 0.08cm;
+            right: 0.08cm;
+            font-size: 4.5px;
+            color: #a0aec0;
+            font-weight: 600;
+            background: rgba(160, 174, 192, 0.1);
+            padding: 0.01cm 0.03cm;
+            border-radius: 1px;
+        }
+        
+        .duration-badge {
+            position: absolute;
+            top: 0.08cm;
+            left: 0.08cm;
+            background: #2d3748;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            padding: 0.02cm 0.05cm;
+            border-radius: 2px;
+            letter-spacing: 0.3px;
+        }
+        
+        /* QR Code pattern untuk simulasi */
+        .qr-pattern {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+            gap: 1px;
+        }
+        
+        .qr-cell {
+            background: #2d3748;
+            border-radius: 1px;
+        }
+		
+		.footer {
+            border-top: 1px dashed #cbd5e0;
+            padding-top: 0.04cm;
+            margin-top: 0.04cm;
+            text-align: center;
+        }
+        
+        .validity {
+            font-size: 5px;
+            color: #718096;
+            font-style: italic;
+        }
+
+.voucher-container {
+    width: 21cm;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0.2cm 0.4cm; 
+    padding: 0.4cm;
+    box-sizing: border-box;
+}
+
+.voucher {
+    /* Mengubah display menjadi table untuk elemen table itu sendiri */
+    display: table; 
+    width: 100%; /* Agar memenuhi lebar 1fr dari grid container */
+    height: 2.6cm;
+    border: 2px solid;
+    padding: 0; /* Padding dipindahkan ke td */
+    box-sizing: border-box;
+    /* ... properti background, color, shadow tetap ... */
+    position: relative;
+    break-inside: avoid;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    /* Menghilangkan border dan cell spacing default table */
+    border-collapse: collapse; 
+}
+
+/* Memastikan elemen turunan tidak memiliki padding/border default table */
+.voucher tr, .voucher td {
+    border: none;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+}
+
+/* Penyesuaian Konten TD */
+.voucher-content-td {
+    width: 70%; /* Lebar untuk Konten Kiri */
+    padding: 0.15cm 0.08cm 0.15cm 0.15cm;
+    height: 2.6cm; /* Tinggi eksplisit */
+}
+
+.qr-divider-td {
+    width: 1px;
+    border-left: 1px dashed #cbd5e0; /* Pemisah vertikal */
+    padding: 0;
+}
+
+.qr-sidebar-td {
+    width: 30%; /* Lebar untuk QR Code Kanan */
+    padding: 0.15cm 0.15cm 0.15cm 0.08cm;
+    height: 2.6cm;
+}
+
+/* Mengembalikan struktur display Flex/Block untuk sub-konten di dalam TD */
+.voucher-content {
+    /* Diganti dengan div wrapper di dalam td */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.voucher-main-info-table {
+    display: flex;
+    margin: 0.06cm 0;
+}
+
+.info-section-bottom {
+    margin-top: auto; /* Mendorong ke bawah */
+}
+
+.qr-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+}
+
+.qr-container {
+    width: 2.5cm;
+    height: 2.5cm;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0.05cm;
+}
+
+.qr-code {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.qrcode{
+    height: 80px; 
+    width: 80px;
+    margin: auto; 
+}
